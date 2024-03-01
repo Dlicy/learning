@@ -16,21 +16,21 @@ def person(name,age,**kw):
 person('bob',34,city='beijing')
 
 
-#变量作用域
+#鍙橀噺浣滅敤鍩�
 x = 50
 def func():
     global x
-    print('x的原值',x)
+    print('x鐨勫師鍊�',x)
     x = 100
-    print('x的改变值',x)
+    print('x鐨勬敼鍙樺€�',x)
 
 func()
-print('x的值',x)
+print('x鐨勫€�',x)
 
 def out_func():
-    x = 5               #x为外部函数的值
+    x = 5               #x涓哄閮ㄥ嚱鏁扮殑鍊�
     def inner_func():
-        nonlocal x      #nonlocal关键字，使内部参数可以修改外部参数的值
+        nonlocal x      #nonlocal鍏抽敭瀛楋紝浣垮唴閮ㄥ弬鏁板彲浠ヤ慨鏀瑰閮ㄥ弬鏁扮殑鍊�
         x = 10
     inner_func()
     print(x)
